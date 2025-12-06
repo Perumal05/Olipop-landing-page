@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface HeroSectionProps {
   variant: DrinkVariant;
@@ -21,51 +22,9 @@ export default function HeroSection({
   onVariantChange,
   isTransitioning,
 }: HeroSectionProps) {
-  const videoRef = React.useRef<HTMLVideoElement>(null);
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
-  const [frameCount, setFrameCount] = React.useState(240);
-
-  React.useLayoutEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const onLoadedMetadata = () => {
-      setFrameCount(Math.floor(video.duration * 30)); // Assuming 30fps
-    };
-
-    video.addEventListener('loadedmetadata', onLoadedMetadata);
-    
-    // Set initial frame
-    video.currentTime = 0;
-    
-    const handleScroll = () => {
-        if (scrollRef.current && video) {
-            const scrollContainer = scrollRef.current;
-            const scrollTop = window.scrollY;
-            const scrollHeight = scrollContainer.scrollHeight - window.innerHeight;
-            
-            if (scrollHeight <= 0) {
-              video.currentTime = 0;
-              return;
-            }
-
-            const scrollFraction = Math.max(0, Math.min(1, scrollTop / scrollHeight));
-            
-            const newTime = video.duration * scrollFraction;
-            if (isFinite(newTime)) {
-                video.currentTime = newTime;
-            }
-        }
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      video.removeEventListener('loadedmetadata', onLoadedMetadata);
-    };
-  }, [variant.videoUrl]);
+  const frameCount = 240; // Assuming a fixed number of frames for the webp sequence.
 
   return (
     <section className="relative h-screen overflow-hidden">
@@ -75,13 +34,12 @@ export default function HeroSection({
         className="absolute top-0 left-0 w-full"
       />
       <div className="sticky top-0 left-0 w-full h-screen">
-        <video
-          ref={videoRef}
+        <Image
           src={variant.videoUrl}
-          muted
-          playsInline
+          alt={`${variant.name} ${variant.subtitle}`}
+          fill
+          priority
           className="w-full h-full object-cover"
-          preload="auto"
           key={variant.videoUrl}
         />
         <div className="absolute inset-0 bg-black/40" />

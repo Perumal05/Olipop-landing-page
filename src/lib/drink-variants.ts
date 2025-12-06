@@ -6,11 +6,6 @@ export interface DrinkVariant {
   accentColor: string;
 }
 
-// NOTE: The user provided animated .webp files. The requested scroll-scrubbing animation
-// is only reliably achievable with video files (.mp4, .webm).
-// These placeholder video URLs are used to build the functionality.
-// To use the original assets, they must be converted to a video format.
-
 export const drinkVariants: DrinkVariant[] = [
   {
     name: 'CHERRY',
@@ -18,7 +13,7 @@ export const drinkVariants: DrinkVariant[] = [
     description:
       'A modern take on a classic soda with a perfect blend of sweet and tart, full of nostalgic flavor.',
     videoUrl:
-      'https://videos.pexels.com/video-files/3849926/3849926-hd_1080_1920_25fps.mp4', // Abstract red liquid
+      'https://storage.googleapis.com/static-assets-ch/olipop/cherry.webp',
     accentColor: 'hsl(0, 72%, 51%)',
   },
   {
@@ -27,7 +22,7 @@ export const drinkVariants: DrinkVariant[] = [
     description:
       'A modern functional soda brand inspired by classic flavors but made with better ingredients.',
     videoUrl:
-      'https://videos.pexels.com/video-files/7562722/7562722-hd_1080_1920_25fps.mp4', // Abstract purple liquid
+      'https://storage.googleapis.com/static-assets-ch/olipop/grape.webp',
     accentColor: 'hsl(270, 72%, 61%)',
   },
   {
@@ -36,7 +31,7 @@ export const drinkVariants: DrinkVariant[] = [
     description:
       'Bright and refreshing citrus soda with natural lemon spark and crisp bubbles.',
     videoUrl:
-      'https://videos.pexels.com/video-files/4442658/4442658-hd_1080_1920_25fps.mp4', // Abstract yellow/green liquid
+      'https://storage.googleapis.com/static-assets-ch/olipop/lemon.webp',
     accentColor: 'hsl(60, 72%, 51%)',
   },
   {
@@ -45,7 +40,7 @@ export const drinkVariants: DrinkVariant[] = [
     description:
       'Vibrant and sun-kissed citrus juice with a naturally sweet orange burst and a smooth, refreshing finish.',
     videoUrl:
-      'https://videos.pexels.com/video-files/8009139/8009139-hd_1080_1920_25fps.mp4', // Abstract orange liquid
+      'https://storage.googleapis.com/static-assets-ch/olipop/orange.webp',
     accentColor: 'hsl(30, 92%, 51%)',
   },
 ];
