@@ -10,7 +10,7 @@ export interface DrinkVariant {
 export const drinkVariants: DrinkVariant[] = [
   {
     name: 'Cherry',
-    subtitle: 'Soda',
+    subtitle: 'Vintage Cola',
     description:
       'A modern take on a classic soda with a perfect blend of sweet and tart, full of nostalgic flavor.',
     imageUrl:
@@ -19,7 +19,7 @@ export const drinkVariants: DrinkVariant[] = [
   },
   {
     name: 'Grape',
-    subtitle: 'Soda',
+    subtitle: 'Classic Grape',
     description:
       'A modern functional soda brand inspired by classic flavors, but made with better ingredients.',
     imageUrl:
@@ -28,7 +28,7 @@ export const drinkVariants: DrinkVariant[] = [
   },
   {
     name: 'Lemon',
-    subtitle: 'Soda',
+    subtitle: 'Zesty Limon',
     description:
       'Bright and refreshing citrus soda with natural lemon spark and crisp bubbles.',
     imageUrl:
@@ -37,7 +37,7 @@ export const drinkVariants: DrinkVariant[] = [
   },
   {
     name: 'Orange',
-    subtitle: 'Soda',
+    subtitle: 'Sweet Squeeze',
     description:
       'Vibrant and sun-kissed citrus juice with a naturally sweet orange burst and a smooth, refreshing finish.',
     imageUrl:
