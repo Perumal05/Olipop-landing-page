@@ -33,7 +33,6 @@ export default function Home() {
 
   React.useEffect(() => {
     // Simulate initial asset loading
-    // In a real app, this would be tied to actual file loading progress
     let progress = 0;
     const interval = setInterval(() => {
       progress += Math.random() * 20;
@@ -47,10 +46,26 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  // Preload next and previous variant images
+  React.useEffect(() => {
+    if (!isLoading) {
+      const nextIndex = (variantIndex + 1) % drinkVariants.length;
+      const prevIndex = (variantIndex - 1 + drinkVariants.length) % drinkVariants.length;
+      
+      const nextVariantImage = new Image();
+      nextVariantImage.src = drinkVariants[nextIndex].videoUrl;
+      
+      const prevVariantImage = new Image();
+      prevVariantImage.src = drinkVariants[prevIndex].videoUrl;
+    }
+  }, [isLoading, variantIndex]);
+
+
   const handleVariantChange = (direction: 'next' | 'prev') => {
     if (isTransitioning) return;
 
     setIsTransitioning(true);
+    // Corresponds to fade-out animation duration
     setTimeout(() => {
       setVariantIndex((prevIndex) => {
         if (direction === 'next') {
@@ -61,10 +76,11 @@ export default function Home() {
           );
         }
       });
+      // Small delay to allow state to update before fade-in
       setTimeout(() => {
         setIsTransitioning(false);
-      }, 50); // Small delay to allow state to update before fade-in
-    }, 300); // Corresponds to fade-out animation duration
+      }, 100); 
+    }, 350); 
   };
 
   React.useEffect(() => {
