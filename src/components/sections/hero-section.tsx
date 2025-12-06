@@ -44,9 +44,18 @@ export default function HeroSection({
             const scrollContainer = scrollRef.current;
             const scrollTop = window.scrollY;
             const scrollHeight = scrollContainer.scrollHeight - window.innerHeight;
+            
+            if (scrollHeight <= 0) {
+              video.currentTime = 0;
+              return;
+            }
+
             const scrollFraction = Math.max(0, Math.min(1, scrollTop / scrollHeight));
             
-            video.currentTime = video.duration * scrollFraction;
+            const newTime = video.duration * scrollFraction;
+            if (isFinite(newTime)) {
+                video.currentTime = newTime;
+            }
         }
     };
     
