@@ -4,7 +4,7 @@ import * as React from 'react';
 import { DrinkVariant } from '@/lib/drink-variants';
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
-import { ArrowUp, ArrowDown } from 'lucide-react';
+import { ArrowUp, ArrowDown, ShoppingCart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
@@ -44,6 +44,7 @@ export default function HeroSection({
                 'w-full md:w-1/2 lg:w-2/5 space-y-6',
                 isTransitioning ? 'content-fade-out' : 'content-fade-in'
               )}
+              style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}
             >
               <h1
                 className="text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter"
@@ -58,11 +59,12 @@ export default function HeroSection({
                 {variant.description}
               </p>
               <div className="flex space-x-4 pt-4">
-                <Button variant="outline" size="lg" className="rounded-full px-8 text-lg bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  ADD TO
-                </Button>
                 <Button variant="default" size="lg" className="rounded-full px-8 text-lg bg-primary text-primary-foreground hover:bg-primary/90">
-                  CART
+                  <ShoppingCart className="mr-2 h-5 w-5" />
+                  Add to Cart
+                </Button>
+                <Button variant="outline" size="lg" className="rounded-full px-8 text-lg bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  Learn More
                 </Button>
               </div>
             </div>
