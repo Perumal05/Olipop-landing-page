@@ -21,7 +21,7 @@ export const drinkVariants: DrinkVariant[] = [
     name: 'GRAPE',
     subtitle: 'SODA',
     description:
-      'A modern functional soda brand inspired by classic flavors.but made with better ingredients.',
+      'A modern functional soda brand inspired by classic flavors, but made with better ingredients.',
     videoUrl:
       'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Grape/Grape-1080p-ezgif.com-video-to-webp-converter.webp',
     accentColor: 'hsl(270, 72%, 61%)',
