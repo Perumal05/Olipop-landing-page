@@ -54,10 +54,10 @@ export default function Home() {
       const prevIndex = (variantIndex - 1 + drinkVariants.length) % drinkVariants.length;
       
       const nextVariantImage = new Image();
-      nextVariantImage.src = drinkVariants[nextIndex].videoUrl;
+      nextVariantImage.src = drinkVariants[nextIndex].imageUrl;
       
       const prevVariantImage = new Image();
-      prevVariantImage.src = drinkVariants[prevIndex].videoUrl;
+      prevVariantImage.src = drinkVariants[prevIndex].imageUrl;
     }
   }, [isLoading, variantIndex]);
 
