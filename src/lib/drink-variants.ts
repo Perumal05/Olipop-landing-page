@@ -10,38 +10,38 @@ export interface DrinkVariant {
 export const drinkVariants: DrinkVariant[] = [
   {
     name: 'CHERRY',
-    subtitle: 'SODA',
+    subtitle: 'VINTAGE COLA',
     description:
-      'A modern fake on a classic soda with a perfect blend of sweet and tart, full of nostalgic flavor.',
+      'A modern take on a classic cola with a perfect blend of sweet and tart cherry, full of nostalgic flavor.',
     videoUrl:
-      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Cherry/Cherry-1080p-ezgif.com-video-to-webp-converter.webp',
+      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Videos/Cherry.mp4',
     accentColor: 'hsl(0, 72%, 51%)',
   },
   {
     name: 'GRAPE',
-    subtitle: 'SODA',
+    subtitle: 'CLASSIC GRAPE',
     description:
-      'A modern functional soda brand inspired by classic flavors, but made with better ingredients.',
+      'A modern functional soda inspired by classic grape flavor, but made with better ingredients for a refreshing taste.',
     videoUrl:
-      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Grape/Grape-1080p-ezgif.com-video-to-webp-converter.webp',
+      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Videos/Grape.mp4',
     accentColor: 'hsl(270, 72%, 61%)',
   },
   {
     name: 'LEMON',
-    subtitle: 'SODA',
+    subtitle: 'REFRESHING LIME',
     description:
-      'Bright and refreshing citrus soda with natural lemon spark and crisp bubbles.',
+      'Bright and refreshing citrus soda with a natural lemon and lime spark and crisp, satisfying bubbles.',
     videoUrl:
-      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Lemon/Lime-1080p-ezgif.com-video-to-webp-converter.webp',
-    accentColor: 'hsl(60, 72%, 51%)',
+      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Videos/Lime.mp4',
+    accentColor: 'hsl(80, 72%, 51%)',
   },
   {
     name: 'ORANGE',
-    subtitle: 'SODA',
+    subtitle: 'SWEET SQUEEZE',
     description:
       'Vibrant and sun-kissed citrus juice with a naturally sweet orange burst and a smooth, refreshing finish.',
     videoUrl:
-      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Orange/Orange-1080p-ezgif.com-video-to-webp-converter.webp',
+      'https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Videos/Orange.mp4',
     accentColor: 'hsl(30, 92%, 51%)',
   },
 ];

@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
 import { ArrowUp, ArrowDown, ShoppingCart } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 
 interface HeroSectionProps {
   variant: DrinkVariant;
@@ -25,15 +24,16 @@ export default function HeroSection({
   return (
     <section className="relative h-screen overflow-hidden">
       <div className="sticky top-0 left-0 w-full h-screen">
-        <Image
-          src={variant.videoUrl}
-          alt={`${variant.name} ${variant.subtitle}`}
-          fill
-          priority
-          className="w-full h-full object-cover"
+        <video
           key={variant.videoUrl}
-          unoptimized
-        />
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={variant.videoUrl} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/40" />
         
         <div className="absolute inset-0 flex items-center justify-center text-primary">
@@ -52,19 +52,16 @@ export default function HeroSection({
               >
                 {variant.name}
               </h1>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-light uppercase tracking-tight -mt-4">
+              <h2 className="font-headline text-2xl md:text-3xl font-semibold uppercase tracking-widest text-primary/90 -mt-4">
                 {variant.subtitle}
               </h2>
               <p className="max-w-md text-lg text-primary/80 text-balance">
                 {variant.description}
               </p>
               <div className="flex space-x-4 pt-4">
-                <Button variant="default" size="lg" className="rounded-full px-8 text-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" className="rounded-full px-8 text-lg bg-primary text-primary-foreground hover:bg-primary/90">
                   <ShoppingCart className="mr-2 h-5 w-5" />
                   Add to Cart
-                </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-8 text-lg bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Learn More
                 </Button>
               </div>
             </div>
