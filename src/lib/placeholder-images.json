@@ -20,9 +20,9 @@
     },
     {
       "id": "cta-grape-can",
-      "description": "A studio shot of the Olipop Grape Soda can on a bold monochrome purple background, with glossy grapes at the base. The style is vibrant and clean, with a pop-art aesthetic.",
-      "imageUrl": "https://images.unsplash.com/photo-1746559882846-7bcea6697a88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncmFwZSUyMHNvZGElMjBjYW58ZW58MHx8fHwxNzY0OTkzNjQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "grape soda can"
+      "description": "A studio shot of an Olipop soda can.",
+      "imageUrl": "https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Images/Gemini_Generated_Image_a0lneda0lneda0ln.png",
+      "imageHint": "soda can"
     },
     {
       "id": "about-image",
