@@ -45,7 +45,7 @@ export default function HeroSection({
                 isTransitioning ? 'content-fade-out' : 'content-fade-in'
               )}
             >
-              <Icons.OlipopLogo className="h-8 w-auto mb-4" />
+              <Icons.OlipopLogo className="h-auto mb-4" width={130} height={30} />
               <h1
                 className="text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter"
                 style={{ color: variant.accentColor }}

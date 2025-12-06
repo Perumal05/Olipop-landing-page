@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface HeaderProps {
   sections: string[];
@@ -30,7 +31,7 @@ export default function Header({ sections, activeSection }: HeaderProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center text-primary">
-            <Icons.OlipopLogo className="h-6 w-auto" />
+            <Icons.OlipopLogo className="h-auto" width={100} height={20} />
           </a>
           <nav className="hidden md:flex space-x-8">
             {sections.map((section) => (

@@ -1,4 +1,5 @@
 import { Icons } from '@/components/icons';
+import Image from 'next/image';
 
 export default function Footer() {
   const footerLinks = ['About', 'Contact', 'Privacy Policy', 'Terms of Service'];
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center md:items-start">
-            <Icons.OlipopLogo className="h-8 w-auto text-primary mb-4" />
+            <Icons.OlipopLogo className="h-auto mb-4" width={130} height={30} />
             <p className="text-sm text-center md:text-left max-w-xs">
               A modern functional soda brand inspired by classic flavors but made with better ingredients.
             </p>

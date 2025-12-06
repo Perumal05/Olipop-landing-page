@@ -2,6 +2,7 @@
 import { Icons } from '@/components/icons';
 import { Progress } from '@/components/ui/progress';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface LoadingScreenProps {
   isVisible: boolean;
@@ -20,7 +21,7 @@ export default function LoadingScreen({
       )}
     >
       <div className="w-48 text-center text-primary">
-        <Icons.OlipopLogo className="w-full h-auto mb-8" />
+        <Icons.OlipopLogo className="h-auto mx-auto mb-8" width={200} height={46} />
         <Progress value={progress} className="h-2" />
         <p className="mt-4 text-sm text-muted-foreground">
           Loading {Math.round(progress)}%
