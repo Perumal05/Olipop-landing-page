@@ -30,7 +30,13 @@ export default function Header({ sections, activeSection }: HeaderProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center text-primary">
-            {/* Logo Removed */}
+            <Image
+              src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/Olipop%20Logo%20Vector.svg"
+              alt="Olipop Logo"
+              width={100}
+              height={40}
+              className="h-10 w-auto"
+            />
           </a>
           <nav className="hidden md:flex space-x-8">
             {sections.map((section) => (

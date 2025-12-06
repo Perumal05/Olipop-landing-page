@@ -20,8 +20,13 @@ export default function LoadingScreen({
       )}
     >
       <div className="w-56 text-center text-primary">
-        {/* Logo Removed */}
-        <div className="h-[46px] mb-8"></div>
+        <Image
+          src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/Olipop%20Logo%20Vector.svg"
+          alt="Olipop Logo"
+          width={180}
+          height={72}
+          className="h-auto w-full mb-8"
+        />
         <Progress value={progress} className="h-2" />
         <p className="mt-4 text-sm text-muted-foreground">
           Loading {Math.round(progress)}%

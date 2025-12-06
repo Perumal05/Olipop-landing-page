@@ -8,7 +8,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center md:items-start">
-            {/* Logo Removed */}
+            <Image
+              src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/Olipop%20Logo%20Vector.svg"
+              alt="Olipop Logo"
+              width={120}
+              height={48}
+              className="h-12 w-auto"
+            />
             <p className="text-sm text-center md:text-left max-w-xs mt-4">
               A modern functional soda brand inspired by classic flavors but made with better ingredients.
             </p>
