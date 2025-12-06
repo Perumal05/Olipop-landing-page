@@ -11,9 +11,9 @@ export default function Footer() {
             <Image
               src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/OlipopVector.png"
               alt="Olipop Logo"
-              width={120}
-              height={48}
-              className="h-12 w-auto"
+              width={100}
+              height={40}
+              className="h-10 w-auto"
             />
             <p className="text-sm text-center md:text-left max-w-xs mt-4">
               A modern functional soda brand inspired by classic flavors but made with better ingredients.

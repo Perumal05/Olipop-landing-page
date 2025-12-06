@@ -19,12 +19,12 @@ export default function LoadingScreen({
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
     >
-      <div className="w-56 text-center text-primary">
+      <div className="w-48 text-center text-primary">
         <Image
           src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/OlipopVector.png"
           alt="Olipop Logo"
-          width={180}
-          height={72}
+          width={160}
+          height={64}
           className="h-auto w-full mb-8"
         />
         <Progress value={progress} className="h-2" />

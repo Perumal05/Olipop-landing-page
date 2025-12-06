@@ -33,9 +33,9 @@ export default function Header({ sections, activeSection }: HeaderProps) {
             <Image
               src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/OlipopVector.png"
               alt="Olipop Logo"
-              width={100}
-              height={40}
-              className="h-10 w-auto"
+              width={80}
+              height={32}
+              className="h-8 w-auto"
             />
           </a>
           <nav className="hidden md:flex space-x-8">
