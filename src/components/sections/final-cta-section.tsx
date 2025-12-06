@@ -13,7 +13,7 @@ export default function FinalCtaSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex justify-center lg:order-last">
             {ctaImage && (
-              <div className="relative w-full max-w-sm">
+              <div className="relative w-full max-w-md">
                  <Image
                   src={ctaImage.imageUrl}
                   alt={ctaImage.description}
