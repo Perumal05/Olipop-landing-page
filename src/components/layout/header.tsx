@@ -31,7 +31,7 @@ export default function Header({ sections, activeSection }: HeaderProps) {
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center text-primary">
             <Image
-              src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/Olipop%20Logo%20Vector.svg"
+              src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/OlipopVector.png"
               alt="Olipop Logo"
               width={100}
               height={40}

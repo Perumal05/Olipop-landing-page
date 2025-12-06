@@ -21,7 +21,7 @@ export default function LoadingScreen({
     >
       <div className="w-56 text-center text-primary">
         <Image
-          src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/Olipop%20Logo%20Vector.svg"
+          src="https://nfjwmtkxudpxalxhmonl.supabase.co/storage/v1/object/public/Olipop/Logos/OlipopVector.png"
           alt="Olipop Logo"
           width={180}
           height={72}
