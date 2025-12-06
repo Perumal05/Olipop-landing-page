@@ -41,24 +41,24 @@ export default function HeroSection({
           {/* Left Side Content */}
           <div
             className={cn(
-              'w-full md:w-1/2 lg:w-2/5 space-y-6',
+              'w-full md:w-1/2 lg:w-2/5 space-y-4 md:space-y-6 text-center md:text-left',
               isTransitioning ? 'content-fade-out' : 'content-fade-in'
             )}
             style={{textShadow: '2px 2px 8px rgba(0,0,0,0.5)'}}
           >
             <h1
-              className="text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter"
+              className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter"
               style={{ color: variant.accentColor }}
             >
               {variant.name}
             </h1>
-            <h2 className="font-headline text-2xl md:text-3xl font-semibold uppercase tracking-widest text-primary/90 -mt-4">
+            <h2 className="font-headline text-xl md:text-3xl font-semibold uppercase tracking-widest text-primary/90 -mt-2 md:-mt-4">
               {variant.subtitle}
             </h2>
-            <p className="max-w-md text-lg text-primary/80 text-balance">
+            <p className="max-w-md text-base md:text-lg text-primary/80 text-balance mx-auto md:mx-0">
               {variant.description}
             </p>
-            <div className="flex space-x-4 pt-4">
+            <div className="flex justify-center md:justify-start space-x-4 pt-4">
               <Button size="lg" className="rounded-full px-8 text-lg bg-primary text-primary-foreground hover:bg-primary/90">
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Add to Cart
@@ -69,22 +69,22 @@ export default function HeroSection({
       </div>
 
       {/* Right Side Variant Navigation */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center text-primary pr-4 md:pr-8 z-20">
+      <div className="absolute right-4 bottom-28 md:right-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 flex items-center text-primary md:pr-4 lg:pr-8 z-20">
         <div
-          className="text-8xl md:text-9xl font-black transition-colors duration-300"
+          className="text-6xl md:text-8xl lg:text-9xl font-black transition-colors duration-300"
           style={{ color: variant.accentColor }}
         >
           0{variantIndex + 1}
         </div>
-        <div className="flex flex-col items-center space-y-4 ml-4">
+        <div className="flex flex-col items-center space-y-2 md:space-y-4 ml-2 md:ml-4">
           <button onClick={() => onVariantChange('prev')} className="group">
-            <span className="text-sm uppercase tracking-widest">PREV</span>
+            <span className="hidden md:inline text-sm uppercase tracking-widest">PREV</span>
             <ArrowUp className="h-6 w-6 mx-auto transition-transform group-hover:-translate-y-1" />
           </button>
-          <div className="h-16 w-px bg-primary/50"></div>
+          <div className="h-12 md:h-16 w-px bg-primary/50"></div>
           <button onClick={() => onVariantChange('next')} className="group">
             <ArrowDown className="h-6 w-6 mx-auto transition-transform group-hover:translate-y-1" />
-            <span className="text-sm uppercase tracking-widest">NEXT</span>
+            <span className="hidden md:inline text-sm uppercase tracking-widest">NEXT</span>
           </button>
         </div>
       </div>
