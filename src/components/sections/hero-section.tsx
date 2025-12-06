@@ -1,3 +1,4 @@
+
 'use client';
 import * as React from 'react';
 import { DrinkVariant } from '@/lib/drink-variants';
@@ -14,25 +15,15 @@ interface HeroSectionProps {
   isTransitioning: boolean;
 }
 
-const FRAME_MULTIPLIER = 25; // Adjust to control scroll sensitivity
-
 export default function HeroSection({
   variant,
   variantIndex,
   onVariantChange,
   isTransitioning,
 }: HeroSectionProps) {
-  const scrollRef = React.useRef<HTMLDivElement>(null);
-  const contentRef = React.useRef<HTMLDivElement>(null);
-  const frameCount = 240; // Assuming a fixed number of frames for the webp sequence.
-
+  
   return (
     <section className="relative h-screen overflow-hidden">
-      <div
-        ref={scrollRef}
-        style={{ height: `${frameCount * FRAME_MULTIPLIER}px` }}
-        className="absolute top-0 left-0 w-full"
-      />
       <div className="sticky top-0 left-0 w-full h-screen">
         <Image
           src={variant.videoUrl}
@@ -41,10 +32,11 @@ export default function HeroSection({
           priority
           className="w-full h-full object-cover"
           key={variant.videoUrl}
+          unoptimized
         />
         <div className="absolute inset-0 bg-black/40" />
         
-        <div ref={contentRef} className="absolute inset-0 flex items-center justify-center text-primary">
+        <div className="absolute inset-0 flex items-center justify-center text-primary">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
             {/* Left Side Content */}
             <div
