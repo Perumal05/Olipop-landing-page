@@ -20,8 +20,8 @@ export default function LoadingScreen({
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
     >
-      <div className="w-48 text-center text-primary">
-        <Icons.OlipopLogo className="h-auto mx-auto mb-8" width={200} height={46} />
+      <div className="w-56 text-center text-primary">
+        <Icons.OlipopLogo className="h-auto mb-8" width={200} height={46} />
         <Progress value={progress} className="h-2" />
         <p className="mt-4 text-sm text-muted-foreground">
           Loading {Math.round(progress)}%
