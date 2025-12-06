@@ -24,10 +24,10 @@ export default function NutritionSection() {
             Nutrition Facts
           </h3>
         </div>
-        <Card className="w-full max-w-md bg-secondary text-primary-foreground p-2 rounded-lg border border-border">
+        <Card className="w-full max-w-md bg-white text-black p-2 rounded-lg">
           <CardContent className="p-4 font-sans">
             <h4 className="text-lg font-semibold">Serving Size 1 can (12 fl oz)</h4>
-            <Separator className="my-2 bg-border" />
+            <Separator className="my-2 bg-gray-200" />
             <div className="flex justify-between font-bold">
                 <span>Amount per serving</span>
             </div>
@@ -35,12 +35,12 @@ export default function NutritionSection() {
                 <h5 className="text-4xl font-extrabold">Calories</h5>
                 <p className="text-5xl font-extrabold">40</p>
             </div>
-            <Separator className="my-1 h-2 bg-border" />
+            <Separator className="my-1 h-2 bg-black" />
             <div className="flex justify-end font-bold text-sm mb-1">% Daily Value*</div>
             
             {nutritionData.map((item, index) => (
                 <React.Fragment key={index}>
-                    <Separator className="my-1 bg-border" />
+                    <Separator className="my-1 bg-gray-200" />
                     <div className="flex justify-between items-center">
                         <p className={item.indent ? 'pl-4' : ''}>
                             <span className="font-bold">{item.label}</span> {item.value}
@@ -50,8 +50,8 @@ export default function NutritionSection() {
                 </React.Fragment>
             ))}
 
-            <Separator className="my-1 h-2 bg-border" />
-            <p className="text-xs mt-4 text-muted-foreground">
+            <Separator className="my-1 h-2 bg-black" />
+            <p className="text-xs mt-4 text-gray-600">
                 *The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
             </p>
           </CardContent>
