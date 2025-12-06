@@ -1,5 +1,4 @@
 'use client';
-import { Icons } from '@/components/icons';
 import { Progress } from '@/components/ui/progress';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -21,7 +20,8 @@ export default function LoadingScreen({
       )}
     >
       <div className="w-56 text-center text-primary">
-        <Icons.OlipopLogo className="h-auto mb-8" width={200} height={46} />
+        {/* Logo Removed */}
+        <div className="h-[46px] mb-8"></div>
         <Progress value={progress} className="h-2" />
         <p className="mt-4 text-sm text-muted-foreground">
           Loading {Math.round(progress)}%
